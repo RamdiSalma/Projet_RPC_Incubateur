@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TailAdmin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="logo">TailAdmin</div>
+    <nav class="menu">
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">eCommerce</a>
+      <a href="#">Analytics</a>
+      <a href="#">Marketing</a>
+      <a href="#">CRM</a>
+      <a href="#">Stocks</a>
+      <a href="#">SaaS</a>
+      <a href="#">Calendar</a>
+      <a href="#">User Profile</a>
+    </nav>
+  </div>
+
+  <div class="main">
+    <header>
+      <input type="text" placeholder="Search or type command...">
+      <div class="profile">
+        <img src="https://via.placeholder.com/40" alt="User" class="user-img">
+        <span>Musharof</span>
+      </div>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Customers</h3>
+        <p class="number">3,782</p>
+        <p class="growth up">+11.01%</p>
+      </div>
+      <div class="card">
+        <h3>Orders</h3>
+        <p class="number">5,359</p>
+        <p class="growth down">-9.05%</p>
+      </div>
+      <div class="card large">
+        <h3>Monthly Target</h3>
+        <div class="circle">
+          <span>75.55%</span>
+        </div>
+        <p class="info">You earn $3287 today, it's higher than last month.</p>
+      </div>
+    </section>
+
+    <section class="sales">
+      <h3>Monthly Sales</h3>
+      <canvas id="salesChart"></canvas>
+    </section>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/events.js"></script>
+
+</body>
+</html>
