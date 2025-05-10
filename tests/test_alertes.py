@@ -1,31 +1,19 @@
 import unittest
-from backend.alertes import generer_alerte, Alerte
+from controllers.rpc_server import check_temperature
 
 class TestAlertes(unittest.TestCase):
 
-    def test_generation_alerte_haute_temperature(self):
-        temp = 39.0
-        seuil = 37.5
-        alerte = generer_alerte(temp, seuil)
+    def test_temperature_basse(self):
+        result = check_temperature(34.0)
+        self.assertIn("basse", result.lower())
 
-        self.assertIsInstance(alerte, Alerte)
-        self.assertEqual(alerte.type, "Température élevée")
-        self.assertEqual(alerte.valeur, temp)
-        self.assertIn("dépassement", alerte.message.lower())
+    def test_temperature_normale(self):
+        result = check_temperature(36.5)
+        self.assertIn("normale", result.lower())
 
-    def test_alerte_pas_de_debordement(self):
-        temp = 36.0
-        seuil = 37.5
-        alerte = generer_alerte(temp, seuil)
-
-        self.assertIsNone(alerte)  # pas d'alerte si la température est normale
-
-    def test_alerte_limite_exacte(self):
-        temp = 37.5
-        seuil = 37.5
-        alerte = generer_alerte(temp, seuil)
-
-        self.assertIsNone(alerte)  # seuil exact ne doit pas déclencher
+    def test_temperature_elevee(self):
+        result = check_temperature(38.0)
+        self.assertIn("élevée", result.lower())
 
 if __name__ == '__main__':
     unittest.main()
