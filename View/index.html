@@ -5,21 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TailAdmin Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Remplace l'ancien lien par celui-ci -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
 </head>
+
 <body>
 
   <div class="sidebar">
-    <div class="logo">TailAdmin</div>
+    <div class="logo">
+      <img src="images/logo_app.png" class="logo_app">
+    </div>
     <nav class="menu">
       <a href="#" class="active">Dashboard</a>
-      <a href="#">eCommerce</a>
-      <a href="#">Analytics</a>
-      <a href="#">Marketing</a>
-      <a href="#">CRM</a>
-      <a href="#">Stocks</a>
-      <a href="#">SaaS</a>
-      <a href="#">Calendar</a>
-      <a href="#">User Profile</a>
+      <a href="#">Incubateur A1</a> <!-- Chambre A incubateur 1 -->
+      <a href="#">Incubateur A2</a>
+      <a href="#">Incubateur B1</a>
+      <a href="#">Incubateur B2</a>
+      <a href="#">Incubateur C1</a>
+      <a href="#">Incubateur C2</a>
+      <a href="#">...</a>
+      <a href="login.html">
+        Deconnexion 
+        <i class="fas fa-right-from-bracket" style="color: #273f68;" id="deconnexion"></i>
+      </a>
+      
     </nav>
   </div>
 
@@ -27,28 +40,37 @@
     <header>
       <input type="text" placeholder="Search or type command...">
       <div class="profile">
-        <img src="https://via.placeholder.com/40" alt="User" class="user-img">
-        <span>Musharof</span>
+        <img src="images/user.png" alt="User" class="user-img">
+        <span>User</span>
       </div>
     </header>
 
     <section class="cards">
       <div class="card">
-        <h3>Customers</h3>
-        <p class="number">3,782</p>
-        <p class="growth up">+11.01%</p>
+        <h3>Nombre des incubateurs</h3>
+        <p class="number">6</p>
+        <p class="growth up">+20%</p>
       </div>
       <div class="card">
-        <h3>Orders</h3>
-        <p class="number">5,359</p>
-        <p class="growth down">-9.05%</p>
+          <div class="thermometer-container">
+            <div class="thermometer">
+                <div class="thermometer-fill" id="thermometerFill">20°C</div>
+                <div class="thermometer-bulb" id="thermometerBulb"></div>
+                <div class="indicator" id="temperatureIndicator"></div>
+            </div>
+          <div class="temperature-control">
+              <input type="range" id="temperatureSlider" min="20" max="50" value="35">
+              <div id="temperatureValue">Température: 35°C</div>
+          </div>
+      </div>
+  
       </div>
       <div class="card large">
-        <h3>Monthly Target</h3>
+        <h3>Température</h3>
         <div class="circle">
-          <span>75.55%</span>
+          <span>35°C</span>
         </div>
-        <p class="info">You earn $3287 today, it's higher than last month.</p>
+        <p class="info">Températeur normal entre 35°C et 37°C</p>
       </div>
     </section>
 
@@ -61,6 +83,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/events.js"></script>
+  
 
 </body>
 </html>
