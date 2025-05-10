@@ -5,7 +5,7 @@
   }
   
   body {
-    display: flex;
+    display: block;
     font-family: 'Poppins', sans-serif;
     background: #f1f5ed32;
     color: #333;
@@ -140,6 +140,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
+<<<<<<< HEAD
   
   .logo_app{
     width: 70%;
@@ -226,3 +227,121 @@ input[type="range"] {
     color: green;
     font-weight: bold;
 }
+=======
+  footer{
+    display: flex; justify-content: center; align-items: center;
+     margin-left: 250px; /* <<--- ajoute cette marge */
+    flex: 1;
+    padding: 20px;
+
+  }
+  .container{
+    width : 60%;
+  }
+  footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: center;
+  padding: 40px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.container {
+  width: 60%;
+}
+
+.footer-16371 {
+  padding: 4rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-16371 .footer-site-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #4200ff;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 2rem 0;
+}
+
+.footer-16371 .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 0px;
+    unicode-bidi: isolate;
+}
+
+.footer-16371 .nav-links li {
+  margin: 0 15px; /* Espace entre les liens */
+}
+
+.footer-16371 .nav-links li a {
+  color: #000;
+  text-decoration: none;
+  font-weight:400;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.footer-16371 .nav-links li a:hover {
+  color: #4200ff;
+}
+
+.footer-16371 .social {
+  margin-top: 20px;
+}
+
+.footer-16371 .social h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 30px;
+}
+
+.footer-16371 .social ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-16371 .social ul li {
+  margin: 0 10px;
+}
+
+.footer-16371 .social ul li a {
+  font-size: 1.5rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-16371 .social ul li.in a {
+  color: #df588a;
+}
+
+.footer-16371 .social ul li.tw a {
+  color: #15b8ff;
+}
+
+.footer-16371 .social ul li.fb a {
+  color: #3742d0;
+}
+
+.footer-16371 .social ul li.dr a {
+  color: #fa38c1;
+}
+
+.footer-16371 .social ul li.pin a {
+  color: #dd4d5a;
+}
+
+.footer-16371 .copyright {
+  margin-top: 20px;
+  color: #999999;
+}
+>>>>>>> 467596a3920fc7f4767739c6322e87a0ada24bc3
