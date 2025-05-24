@@ -1,5 +1,5 @@
 import unittest
-from models.temperature_model import save_temperature, get_latest_temperature
+from Model.temperature import save_temperature, get_latest_temperature
 
 class TestTemperatureModel(unittest.TestCase):
 

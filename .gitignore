@@ -7,9 +7,13 @@
 !*.py
 !requirements.txt
 !templates/
+!templates/**
+
 !static/
+!static/**
 !Model/
 !tests/
+!tests/**
 
 # Ignorer spécifiquement certains fichiers/dossiers
 .env
