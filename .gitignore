@@ -1,0 +1,19 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Ignore tout par défaut
+*
+
+
+!.gitignore
+!*.py
+!requirements.txt
+!templates/
+!static/
+!Model/
+!tests/
+
+# Ignorer spécifiquement certains fichiers/dossiers
+.env
+venv/
+*.log
+__pycache__/
+
