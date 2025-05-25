@@ -8,7 +8,7 @@
 !requirements.txt
 !templates/
 !templates/**
-
+!Controller/
 !static/
 !static/**
 !Model/

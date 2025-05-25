@@ -1,6 +1,6 @@
 from xmlrpc.server import SimpleXMLRPCServer
 from datetime import datetime
-from Model.temperature import TemperatureSimulator
+from Controller.temperature import TemperatureSimulator
 
 # On instancie la classe TemperatureSimulator qui gère la température + alertes
 incubator = TemperatureSimulator()
