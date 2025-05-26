@@ -1,0 +1,26 @@
+-- Créer la base de données
+CREATE DATABASE Incubateur_DB;
+GO
+
+-- Utiliser la base de données
+USE Incubateur_DB;
+GO
+
+-- Créer la table Medecin
+CREATE TABLE Medecin (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    password NVARCHAR(255) NOT NULL,
+    nom NVARCHAR(50) NOT NULL,
+    prenom NVARCHAR(50) NOT NULL,
+    departement NVARCHAR(100) NOT NULL
+);
+GO
+
+-- Créer la table Incident
+CREATE TABLE Incident (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    type_alerte NVARCHAR(100) NOT NULL,
+    temperature FLOAT NOT NULL,
+    date_heure DATETIME NOT NULL DEFAULT GETDATE()
+);
+GO
